@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PWHL Proxy</title>
+    <script>
+      async function fetchData() {
+        const url = 'https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=players&season=5&sort=points&playertype=skater&position=skaters&rookie=no&statstype=standard&page=1&league=1&key=50c2cd9b5e18e390&client_code=pwhl&format=json';
+        const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+        const data = await res.text();
+        document.write(data);
+      }
+      fetchData();
+    </script>
+  </head>
+  <body></body>
+</html>
